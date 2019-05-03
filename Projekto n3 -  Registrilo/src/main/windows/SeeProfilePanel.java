@@ -7,7 +7,7 @@ public class SeeProfilePanel extends JPanel {
 
 	private JLabel name;
 	private JLabel type;
-	private int ci;
+	private JLabel ci;
 	
 	public SeeProfilePanel() {
 		
