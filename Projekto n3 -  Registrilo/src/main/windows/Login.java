@@ -13,7 +13,9 @@ import main.database.Database;
 
 public class Login extends JPanel {
 	
+	private static final String welc = "Bienvenido ";
 	private JLabel ci;
+	private JLabel welcome;
 	private JTextField inputCi;
 	private JButton next;
 	
@@ -32,15 +34,28 @@ public class Login extends JPanel {
 		ci.setFont(ci.getFont().deriveFont(30f));
 		inputCi = new JTextField(6);
 		inputCi.setFont(ci.getFont());
+		welcome = new JLabel(welc);
+		welcome.setFont(ci.getFont());
 		next = new JButton("Siguiente");
 		next.setFont(ci.getFont());
 		next.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				if(!inputCi.getText().equals("") && Database.isRegistered()) {
-					inputCi.setText("");
 					
 					Database.registerAssistence(inputCi.getText());
+					welcome.setText(welc + Database.getName(Integer.parseInt(inputCi.getText())));
+					
+					inputCi.setText("");
+					
+					remove(next);
+					remove(ci);
+					remove(inputCi);
+					add(welcome);
+					updateUI();
+					
+					
+					
 				}
 			}
 			
