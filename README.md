@@ -2,7 +2,7 @@
 # Registrilo
 
 ## History
-This was meant to be used in a school to make registering and visualising easier and more intituive but that school closed, so I stopped.
+This was meant to be used in a school to make registering and visualising easier and more intituive to replace the old program but that school closed and probably there is a lot programs better that I could ever done, so I stopped.
 
 This is highly unlikely but If you find this useful you are free to use it.
 
